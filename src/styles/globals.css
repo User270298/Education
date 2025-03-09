@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Corporate A';
+  src: url('/fonts/CorporateA-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corporate A Condensed';
+  src: url('/fonts/CorporateACondensed-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply text-mercedes-black bg-mercedes-white font-corporate;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-corporate-condensed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .input-mercedes {
+    @apply w-full px-4 py-2 border-2 border-mercedes-chrome focus:border-mercedes-accent
+    focus:ring-0 outline-none transition-colors duration-200;
+  }
+} 
