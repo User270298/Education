@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 const AboutPage = () => {
   const router = useRouter();
@@ -49,115 +50,261 @@ const AboutPage = () => {
         return (
           <div>
             <h2 className="text-3xl font-corporate-condensed tracking-wider mb-6">Основные сведения</h2>
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-corporate-condensed mb-3">Общая информация</h3>
-                <p className="text-gray-700 mb-4">
-                  Образовательная организация основана в 2005 году и является одним из ведущих учебных заведений в своей области.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Полное наименование: Автономная некоммерческая организация дополнительного профессионального образования "Образовательная Организация"</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Сокращенное наименование: АНО ДПО "Образовательная Организация"</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Дата создания: 15 марта 2005 года</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-corporate-condensed mb-3">Контактная информация</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Адрес: г. Москва, ул. Примерная, д. 123</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Телефон: +7 (999) 123-45-67</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Email: info@education.ru</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Режим работы: Пн-Пт с 9:00 до 18:00</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-corporate-condensed mb-3">Учредители</h3>
-                <p className="text-gray-700 mb-4">
-                  Учредителями организации являются:
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>ООО "Образовательные технологии"</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Иванов Иван Иванович</span>
-                  </li>
-                </ul>
-              </div>
+            
+            <div className="overflow-hidden bg-white shadow-md rounded-lg">
+              <table className="min-w-full divide-y divide-gray-200">
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 w-1/3">
+                      Дата создания образовательной организации
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «АКАДЕМИЯ ПРАКТИКИ МЕЖДУНАРОДНОГО БИЗНЕСА» действует с 22 февраля 2024 года
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Полное наименование организации
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «АКАДЕМИЯ ПРАКТИКИ МЕЖДУНАРОДНОГО БИЗНЕСА»
+                    </td>
+                  </tr>
+                  
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Сокращенное наименование организации
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      ООО «АПМБ»
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Учредителем является
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      Зулина Елена Владимировна
+                    </td>
+                  </tr>
+                  
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Лицензия на осуществление образовательной деятельности
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      Лицензии на осуществление образовательной деятельности от 05.04.2024 г. № Л035-01298-77/01118654, выдана Департаментом образования и науки города Москвы
+                      <div className="mt-2">
+                        <a 
+                          href="https://islod.obrnadzor.gov.ru/rlic/details/aeab445a-9e89-f718-9dd9-a49fc05d71b5/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-mercedes-accent hover:underline"
+                        >
+                          Выписка из реестра
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Место нахождения организации
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      108803, Г.МОСКВА, ВН.ТЕР.Г. ПОСЕЛЕНИЕ ВОСКРЕСЕНСКОЕ, П ВОСКРЕСЕНСКОЕ, Д. 40, К. 2, КВ. 48
+                    </td>
+                  </tr>
+                  
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Адрес места осуществления образовательной деятельности
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      108803, Г.МОСКВА, ВН.ТЕР.Г. ПОСЕЛЕНИЕ ВОСКРЕСЕНСКОЕ, П ВОСКРЕСЕНСКОЕ, Д. 40, К. 2, КВ. 48
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Режим работы образовательной организации
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      Понедельник - пятница с 10:00 до 19:00
+                    </td>
+                  </tr>
+                  
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      Контактные телефоны, адрес электронной почты, адрес официального сайта
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-700">
+                      <div>Тел.: 89613250011, 8 (863) 226-87-00</div>
+                      <div>E-mail: <a href="mailto:academ.ibp@gmail.com" className="text-mercedes-accent hover:underline">academ.ibp@gmail.com</a></div>
+                      <div>Сайт: <a href="https://academ-ibp.com" target="_blank" rel="noopener noreferrer" className="text-mercedes-accent hover:underline">https://academ-ibp.com</a></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         );
       case 'structure':
         return (
           <div>
-            <h2 className="text-3xl font-corporate-condensed tracking-wider mb-6">Структура и органы управления</h2>
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-corporate-condensed mb-3">Структура организации</h3>
-                <p className="text-gray-700 mb-4">
-                  Образовательная организация имеет следующую структуру управления:
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Директор - осуществляет общее руководство</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Заместитель директора по учебной работе - координирует образовательный процесс</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Заместитель директора по административно-хозяйственной части - отвечает за материально-техническое обеспечение</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Учебно-методический отдел - разрабатывает и совершенствует учебные программы</span>
-                  </li>
-                </ul>
+            <h2 className="text-3xl font-corporate-condensed tracking-wider mb-6">Структура и органы управления образовательной организацией</h2>
+            
+            <div className="space-y-8">
+              {/* Организационная структура */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-corporate-condensed mb-4">Организационная структура</h3>
+                
+                <div className="relative h-[400px] md:h-[500px] bg-gray-100 rounded-lg overflow-hidden mb-4">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Схема организационной структуры */}
+                    <div className="w-full max-w-3xl mx-auto px-4">
+                      <div className="bg-white rounded-lg shadow-lg p-6">
+                        <div className="flex flex-col items-center">
+                          {/* Генеральный директор */}
+                          <div className="bg-mercedes-accent text-white px-6 py-3 rounded-md text-center mb-8 w-64">
+                            <div className="font-bold">Генеральный директор</div>
+                            <div className="text-sm">Содикова С.Ш.</div>
+                          </div>
+                          
+                          {/* Линия соединения */}
+                          <div className="w-0.5 h-8 bg-gray-400"></div>
+                          
+                          {/* Учебный центр */}
+                          <div className="bg-mercedes-silver/30 text-gray-800 px-6 py-3 rounded-md text-center mb-8 w-64">
+                            <div className="font-bold">Учебный центр ООО «АПМБ»</div>
+                          </div>
+                          
+                          {/* Линия соединения */}
+                          <div className="w-0.5 h-8 bg-gray-400"></div>
+                          
+                          {/* Нижний уровень */}
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                            <div className="bg-gray-100 text-gray-800 px-4 py-3 rounded-md text-center">
+                              <div className="font-bold">Учебно-методический отдел</div>
+                            </div>
+                            <div className="bg-gray-100 text-gray-800 px-4 py-3 rounded-md text-center">
+                              <div className="font-bold">Отдел по работе с клиентами</div>
+                            </div>
+                            <div className="bg-gray-100 text-gray-800 px-4 py-3 rounded-md text-center">
+                              <div className="font-bold">Административный отдел</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <a 
+                    href="#" 
+                    className="inline-flex items-center px-4 py-2 bg-mercedes-accent text-white rounded-md hover:bg-mercedes-accent/80 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Скачать схему организационной структуры (PDF)
+                  </a>
+                </div>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-corporate-condensed mb-3">Органы управления</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Общее собрание работников - высший коллегиальный орган управления</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Педагогический совет - постоянно действующий коллегиальный орган управления</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-mercedes-accent mr-2">•</span>
-                    <span>Методический совет - совещательный орган при директоре</span>
-                  </li>
-                </ul>
+              {/* Сведения о руководителях */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-corporate-condensed mb-4">Сведения о руководителях</h3>
+                
+                <div className="overflow-hidden bg-white rounded-lg border border-gray-200">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 w-1/3">
+                          Генеральный директор
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          Содикова Сабина Шухратжоновна
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          Телефон
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          89613250011, 8 (863) 226-87-00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          Email
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          <a href="mailto:academ.ibp@gmail.com" className="text-mercedes-accent hover:underline">
+                            academ.ibp@gmail.com
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          Сайт
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          <a href="https://academ-ibp.com" target="_blank" rel="noopener noreferrer" className="text-mercedes-accent hover:underline">
+                            https://academ-ibp.com
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              {/* Структурные подразделения */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-corporate-condensed mb-4">Структурные подразделения</h3>
+                
+                <div className="overflow-hidden bg-white rounded-lg border border-gray-200">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 w-1/3">
+                          Наименование структурного подразделения
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          Учебный центр ООО «АПМБ»
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          Место нахождения структурного подразделения
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          108803, Г.МОСКВА, ВН.ТЕР.Г. ПОСЕЛЕНИЕ ВОСКРЕСЕНСКОЕ, П ВОСКРЕСЕНСКОЕ, Д. 40, К. 2, КВ. 48
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          Положение о структурном подразделении
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          <a 
+                            href="#" 
+                            className="inline-flex items-center text-mercedes-accent hover:underline"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Положение о структурном подразделении (PDF)
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -224,8 +371,8 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Сведения об организации - Образовательная Организация</title>
-        <meta name="description" content="Сведения об образовательной организации" />
+        <title>Сведения об организации - ООО «АПМБ»</title>
+        <meta name="description" content="Сведения об образовательной организации ООО «АПМБ»" />
       </Head>
 
       <Header />

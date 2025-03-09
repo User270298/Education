@@ -27,7 +27,7 @@ function Header() {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 md:py-6">
           <h1 className="text-2xl md:text-3xl font-corporate-condensed tracking-wider">
-            Образовательная Организация
+            ООО «АПМБ»
           </h1>
           <div className="text-left md:text-right font-corporate text-mercedes-silver mt-2 md:mt-0">
             <p>ИНН: 1234567890</p>
@@ -95,10 +95,10 @@ function Header() {
             </div>
             
             <a 
-              href="/about" 
+              href="/contacts" 
               className="py-4 px-6 text-mercedes-silver hover:text-mercedes-white hover:bg-mercedes-accent transition-all duration-200"
             >
-              О нас
+              Контакты
             </a>
           </nav>
         </div>
@@ -141,11 +141,11 @@ function Header() {
             </div>
             
             <a 
-              href="/about" 
+              href="/contacts" 
               className="text-mercedes-silver hover:text-mercedes-accent transition-colors duration-200 py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              О нас
+              Контакты
             </a>
           </div>
         </div>

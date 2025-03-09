@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 md:py-6">
           <h1 className="text-2xl md:text-3xl font-corporate-condensed tracking-wider">
-            Образовательная Организация
+            ООО «АПМБ»
           </h1>
           <div className="text-left md:text-right font-corporate text-mercedes-silver mt-2 md:mt-0">
             <p>ИНН: 1234567890</p>
