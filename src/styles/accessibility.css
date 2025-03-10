@@ -1,0 +1,116 @@
+/* Стили для версии слабовидящих */
+.accessible-mode {
+  /* Увеличенный контраст и читаемость */
+  --accessible-text: #000000;
+  --accessible-bg: #FFFFFF;
+  --accessible-link: #0000FF;
+  --accessible-link-visited: #800080;
+  --accessible-border: #000000;
+  
+  background-color: var(--accessible-bg) !important;
+  color: var(--accessible-text) !important;
+}
+
+/* Увеличенный размер шрифта */
+.accessible-mode * {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.5px !important;
+  font-family: Arial, sans-serif !important;
+}
+
+/* Заголовки */
+.accessible-mode h1 { font-size: 32px !important; }
+.accessible-mode h2 { font-size: 28px !important; }
+.accessible-mode h3 { font-size: 24px !important; }
+.accessible-mode h4 { font-size: 22px !important; }
+
+/* Ссылки */
+.accessible-mode a {
+  color: var(--accessible-link) !important;
+  text-decoration: underline !important;
+}
+
+.accessible-mode a:visited {
+  color: var(--accessible-link-visited) !important;
+}
+
+/* Таблицы */
+.accessible-mode table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1em 0 !important;
+}
+
+.accessible-mode th,
+.accessible-mode td {
+  border: 2px solid var(--accessible-border) !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+/* Изображения */
+.accessible-mode img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Фокус элементов */
+.accessible-mode *:focus {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 2px !important;
+}
+
+/* Кнопки */
+.accessible-mode button {
+  padding: 12px 24px !important;
+  border: 2px solid var(--accessible-border) !important;
+  background-color: var(--accessible-bg) !important;
+  color: var(--accessible-text) !important;
+  cursor: pointer !important;
+}
+
+/* Формы */
+.accessible-mode input,
+.accessible-mode textarea,
+.accessible-mode select {
+  padding: 12px !important;
+  border: 2px solid var(--accessible-border) !important;
+  background-color: var(--accessible-bg) !important;
+  color: var(--accessible-text) !important;
+}
+
+/* Списки */
+.accessible-mode ul,
+.accessible-mode ol {
+  padding-left: 2em !important;
+  margin: 1em 0 !important;
+}
+
+.accessible-mode li {
+  margin: 0.5em 0 !important;
+}
+
+/* Контрастные цвета для различных элементов */
+.accessible-mode .bg-mercedes-accent {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.accessible-mode .text-gray-700,
+.accessible-mode .text-gray-600,
+.accessible-mode .text-gray-500 {
+  color: var(--accessible-text) !important;
+}
+
+/* Улучшенная читаемость таблиц */
+.accessible-mode .overflow-x-auto {
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  margin: 1em 0 !important;
+}
+
+.accessible-mode .min-w-full {
+  min-width: 100% !important;
+  width: 100% !important;
+} 
